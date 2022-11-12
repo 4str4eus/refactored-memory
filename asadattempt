@@ -3,49 +3,83 @@
     <p>i want to die :)</p>
 </head>
 
-    <style>
-        body {
-            padding: 25px;
-            background-color:#ff91af;
-            color:darkcyan;
-        }
+<style>
+    body {
+        padding: 25px;
+        background-color: #ff91af;
+        color: darkcyan;
+    }
 
-        button {
-            color:darkcyan;
-            background-color:#ffb2c7;
-            border-color:rgb(8, 162, 162);
-            border-style:outset;
-        }
+    button {
+        color: darkcyan;
+        background-color: #ffb2c7;
+        border-color: rgb(8, 162, 162);
+        border-style: outset;
+    }
 
-        button:hover{
-            background-color:transparent;
-            border-style:inset;
-        }
+    button:hover {
+        background-color: transparent;
+        border-style: inset;
+    }
 
-        .button2 {
-            color:#ff91af;
-            background-color:rgb(0, 165, 168);
-            border-color: #ffb9cb;
-        }
+    .button2 {
+        color: #ff91af;
+        background-color: rgb(0, 165, 168);
+        border-color: #ffb9cb;
+    }
 
-        .swap {
-            background-color:darkcyan;
-            color:#ff91af;
-        }
+    .swap {
+        background-color: darkcyan;
+        color: #ff91af;
+    }
 
-    </style>
+    .grid-container {
+        display: grid;
+        grid-template-columns: max-content max-content;
+        background-color: transparent;
+        padding: 5px;
+    }
+
+    .grid-container>div {
+        background-color: transparent;
+        text-align: left;
+        padding: 5px;
+        font-size: 30px;
+    }
+
+    .item1 {
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+</style>
 
 
 <body>
-        <button id="buttone" type="button" onclick="buttonclick1()">CLick me</button>
 
-<script>
-    function buttonclick1() {
-       var element = document.body;
-       element.classList.toggle("swap");
-       var element = document.getElementById("buttone");
-       element.classList.toggle("button2");
-    }
+
+
+    <div class="grid-container">
+
+        <div>
+            <button id="buttone" type="button" onclick="buttonclick1()">CLick me</button>
+        </div>
+
+        <div>
+            <button>nya</button>
+        </div>
+      </div>
+
+    <script>
+        function buttonclick1() {
+            var element = document.body;
+            element.classList.toggle("swap");
+            var element = document.getElementById("buttone");
+            element.classList.toggle("button2");
+        }
+
+        function malakaisaysmeow() {
+            document.getelementbyid.play("audioe");
+        }
 
     </script>
 </body>
