@@ -65,7 +65,7 @@
         </div>
 
         <div>
-            <button>nya</button>
+            <button id="buttone2" type="button">nya</button>
         </div>
       </div>
 
@@ -73,8 +73,11 @@
         function buttonclick1() {
             var element = document.body;
             element.classList.toggle("swap");
-            var element = document.getElementById("buttone");
-            element.classList.toggle("button2");
+
+            var element = document.getElementById('buttone');
+            element.classList.toggle('button2');
+            var button = document.getElementById('buttone2');
+            button.classList.toggle('button2');
         }
 
         function malakaisaysmeow() {
