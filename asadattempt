@@ -47,10 +47,6 @@
         font-size: 30px;
     }
 
-    .item1 {
-        grid-row-start: 1;
-        grid-row-end: 3;
-    }
 </style>
 
 
