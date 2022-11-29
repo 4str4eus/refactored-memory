@@ -1,58 +1,73 @@
 <!DOCTYPE.html>
-<html>
-<style>
+    <html>
+    <style>
 
-    body{
-        background-color: rgb(117, 107, 181);
-        color: rgb(173, 204, 244);
-    }
+        body {
+            background-color: rgb(117, 107, 181);
+            color: rgb(173, 204, 244);
+            margin: 0%;
+        }
 
-    header {
-        color:rgb(219, 248, 248);
-        display: inline-flex;
-    }
+        header {
+            color: rgb(219, 248, 248);
+            display: block;
+            width: 100vw;
+            position: sticky;
+        }
 
-    .grid-container {
-        display: grid;
-        grid-template-columns: max-content 1fr;
-        padding: 10px;
-        grid-gap: 10px;
-        background-color: rgb(170, 170, 203);
-    }
+        .regtxt {
+            margin: 10px;
+        }
 
-    .grid-container>div {
-        background-color: purple;
-        padding: 10px;
-        font-size: 20px;
-    }
+        .grid-container {
+            display: grid;
+            grid-template-columns: max-content 1fr min-content;
+            grid-template-rows: 70px;
+            grid-gap: 10px;
+            background-color: rgb(170, 170, 203);
+            padding: 10px;
+        }
 
-    .item2 {
-        text-align: right;
-    }
+        .grid-container>div {
+            background-color: purple;
+            padding: 10px;
+            font-size: 20px;
+        }
 
+        .item2 {
+            text-align: right;
+        }
 
-</style>
+        .item3 {
+            height: 100%;
+        }
 
-<body>
+    </style>
 
-<header>
+    <body>
 
-    <div class = "grid-container">
+        <header>
 
-        <div class="item1">
-            <p>im gay</p>
-        </div>   
+            <div class="grid-container">
 
-        <div class="item2">
-            <p>small man</p>
-        </div>
+                <div>
+                    <p class="item1">test</p>
+                </div>
 
-    </div>   
+                <div>
+                    <p class="item2">also a test oh yuh</p>
+                </div>
 
-</header>
+                <div style="font-size: 14px;">
+                    <img class="item3" src="images/testimg-1.jpeg" alt="he looks very relaxed">
+                </div>
 
-<p>piss</p>
+            </div>
 
+        </header>
 
-</body>
-</html>
+        <p class="regtxt">sample text</p>
+
+    </body>
+
+    </html>
