@@ -1,11 +1,20 @@
 <!DOCTYPE.html>
     <html>
+
+    <head>
     <style>
+    
+
+        @font-face {
+            font-family: werbsitefont;
+            src: url(media/Werbsitefont.ttf);
+        }
 
         body {
-            background-color: rgb(117, 107, 181);
-            color: rgb(173, 204, 244);
+            background-color: rgb(212, 208, 233);
+            color: rgb(30, 11, 71);
             margin: 0%;
+            font-family: werbsitefont;
         }
 
         header {
@@ -13,17 +22,34 @@
             display: block;
             width: 100vw;
             position: sticky;
+            border-bottom: 1px solid rgb(30, 11, 71);
         }
 
         img {
             height: 100%;
         }
 
-        .regtxt {
-            margin: 10px;
+        button {
+            width: 100%;
+            text-align: left;
+            border: 1px solid rgb(30, 11, 71);
+            padding: 4%;
+            background-color: rgb(212, 208, 233);
+            font-family: werbsitefont;
+            font-size: 15px;
         }
 
-        .grid-container {
+        button:hover {
+            opacity: 70%;
+        }
+
+        .regtxt {
+            margin: 10px;
+            font-size: 20px;
+
+        }
+
+        .header-container {
             display: grid;
             grid-template-columns: max-content 1fr min-content;
             grid-template-rows: 70px;
@@ -31,40 +57,88 @@
             padding: 10px;
         }
 
-        .grid-container>div {
+        .header-container>div {
             padding: 10px;
-            font-size: 15px;
+            font-size: 20px;
+        }
+
+        .button-container {
+            display: grid;
+            grid-template-rows: min-content min-content min-content;
+            border: hidden;
+            padding: 10px;
+            margin: 2%;
+            width: 30%;
+            background-color: rgb(170, 170, 203);
+        }
+
+        .button-container>div {
+            padding: 1px;
         }
 
         .item2 {
             text-align: right;
         }
-
     </style>
+</head>
+
+    <header>
+
+        <div class="header-container">
+
+            <div>
+                <img src="images/website.png" alt="welcome to werbsite"></img>
+            </div>
+
+            <div>
+                <p class="item2">welcome,</p>
+            </div>
+
+            <div style="font-size: 14px;">
+                <img class="item3" src="images/user1.png" alt="it's you!">
+            </div>
+
+        </div>
+
+    </header>
+
 
     <body>
 
-        <header>
+        <audio id="bruh">
+            <source src="media/bruh.mp3" type="audio/mpeg">
+        </audio>
 
-            <div class="grid-container">
+        <div class="button-container">
 
-                <div>
-                    <img src="images/website.png"></img>
-                </div>
-
-                <div>
-                    <p class="item2">welcome,</p>
-                </div>
-
-                <div style="font-size: 14px;">
-                    <img class="item3" src="images/user1.png" alt="it's you!">
-                </div>
-
+            <div>
+                <button onclick="settings()" alt="settings">Settings</button>
             </div>
 
-        </header>
+            <div>
+                <button>ayooo</button>
+            </div>
+
+        </div>
+
+
+
 
         <p class="regtxt">sample text</p>
+
+        <script>
+            
+            let x = document.getElementById("bruh")
+
+
+            function settings() {
+               window.alert("what the fuck");
+               x.play();
+            }
+
+            let y = document.getelementbyid("vineboom")
+
+        </script>
 
     </body>
 
