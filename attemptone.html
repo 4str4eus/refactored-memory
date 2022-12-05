@@ -19,6 +19,8 @@
 
         header {
             color: black;
+            background-image: url(images/bgtexture.png);
+            background-size: 30px;
             display: block;
             width: 100vw;
             position: sticky;
@@ -53,7 +55,6 @@
             display: grid;
             grid-template-columns: max-content 1fr min-content;
             grid-template-rows: 70px;
-            background-color: rgb(170, 170, 203);
             padding: 10px;
         }
 
@@ -69,7 +70,8 @@
             padding: 10px;
             margin: 2%;
             width: 30%;
-            background-color: rgb(170, 170, 203);
+            background-image: url(images/bgtexture.png);
+            background-size: 30px;
         }
 
         .button-container>div {
@@ -87,7 +89,7 @@
         <div class="header-container">
 
             <div>
-                <img src="images/website.png" alt="welcome to werbsite"></img>
+                <img  src="images/website.png" alt="welcome to werbsite">
             </div>
 
             <div>
@@ -95,7 +97,7 @@
             </div>
 
             <div style="font-size: 14px;">
-                <img class="item3" src="images/user1.png" alt="it's you!">
+                <img onclick="user()" id="user" class="item3" src="images/user1.png" alt="it's you!">
             </div>
 
         </div>
@@ -109,34 +111,58 @@
             <source src="media/bruh.mp3" type="audio/mpeg">
         </audio>
 
+        <audio id="vineboom">
+            <source src="media/vine-boom.mp3" type="audio/mpeg">
+        </audio>
+    
+
+
+
+
         <div class="button-container">
+            
+
+            <div>
+                <button>Log in</button>
+            </div>
 
             <div>
                 <button onclick="settings()" alt="settings">Settings</button>
             </div>
 
             <div>
-                <button>ayooo</button>
+                <button onclick="help()" id="support">Help</button>
             </div>
 
         </div>
-
-
-
 
         <p class="regtxt">sample text</p>
 
         <script>
             
-            let x = document.getElementById("bruh")
+            let x = document.getElementById("bruh");
+            let useraudio = document.getElementById("vineboom");
+
+            let userr = document.getElementbyId("user");
+            let support = document.getElementbyId("support")
 
 
             function settings() {
-               window.alert("what the fuck");
                x.play();
             }
 
-            let y = document.getelementbyid("vineboom")
+            function user() {
+                useraudio.play();
+            }
+
+            let play = (sound) => {
+                sound.play();
+            }
+            
+            function help() {
+                document.getElementById("support").style.display = "none";
+            }
+
 
         </script>
 
