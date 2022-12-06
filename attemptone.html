@@ -2,102 +2,100 @@
     <html>
 
     <head>
-    <style>
-    
+        <style>
+            @font-face {
+                font-family: werbsitefont;
+                src: url(media/Werbsitefont.ttf);
+            }
 
-        @font-face {
-            font-family: werbsitefont;
-            src: url(media/Werbsitefont.ttf);
-        }
+            body {
+                background-color: rgb(212, 208, 233);
+                color: rgb(30, 11, 71);
+                margin: 0%;
+                font-family: werbsitefont;
+            }
 
-        body {
-            background-color: rgb(212, 208, 233);
-            color: rgb(30, 11, 71);
-            margin: 0%;
-            font-family: werbsitefont;
-        }
+            header {
+                color: black;
+                background-image: url(images/bgtexture.png);
+                background-size: 30px;
+                display: block;
+                width: 100vw;
+                position: sticky;
+                border-bottom: 1px solid rgb(30, 11, 71);
+            }
 
-        header {
-            color: black;
-            background-image: url(images/bgtexture.png);
-            background-size: 30px;
-            display: block;
-            width: 100vw;
-            position: sticky;
-            border-bottom: 1px solid rgb(30, 11, 71);
-        }
+            img {
+                height: 100%;
+            }
 
-        img {
-            height: 100%;
-        }
+            button {
+                width: 100%;
+                text-align: left;
+                border: 1px solid rgb(30, 11, 71);
+                padding: 4%;
+                background-color: rgb(212, 208, 233);
+                font-family: werbsitefont;
+                font-size: 15px;
+            }
 
-        button {
-            width: 100%;
-            text-align: left;
-            border: 1px solid rgb(30, 11, 71);
-            padding: 4%;
-            background-color: rgb(212, 208, 233);
-            font-family: werbsitefont;
-            font-size: 15px;
-        }
+            button:hover {
+                opacity: 70%;
+            }
 
-        button:hover {
-            opacity: 70%;
-        }
+            .regtxt {
+                margin: 10px;
+                font-size: 20px;
 
-        .regtxt {
-            margin: 10px;
-            font-size: 20px;
+            }
 
-        }
+            .header-container {
+                display: grid;
+                grid-template-columns: max-content 1fr min-content;
+                grid-template-rows: 70px;
+                padding: 10px;
+            }
 
-        .header-container {
-            display: grid;
-            grid-template-columns: max-content 1fr min-content;
-            grid-template-rows: 70px;
-            padding: 10px;
-        }
+            .header-container>div {
+                padding: 10px;
+                font-size: 20px;
+            }
 
-        .header-container>div {
-            padding: 10px;
-            font-size: 20px;
-        }
+            .button-container {
+                display: grid;
+                grid-template-rows: min-content min-content min-content;
+                border: hidden;
+                padding: 10px;
+                margin: 2%;
+                width: 30%;
+                background-image: url(images/bgtexture.png);
+                background-size: 30px;
+            }
 
-        .button-container {
-            display: grid;
-            grid-template-rows: min-content min-content min-content;
-            border: hidden;
-            padding: 10px;
-            margin: 2%;
-            width: 30%;
-            background-image: url(images/bgtexture.png);
-            background-size: 30px;
-        }
+            .button-container>div {
+                padding: 1px;
+            }
 
-        .button-container>div {
-            padding: 1px;
-        }
-
-        .item2 {
-            text-align: right;
-        }
-    </style>
-</head>
+            .item2 {
+                text-align: right;
+            }
+        </style>
+    </head>
 
     <header>
 
         <div class="header-container">
 
             <div>
-                <img  src="images/website.png" alt="welcome to werbsite">
+                <img src="images/website.png" alt="welcome to werbsite">
             </div>
 
-            <div>
-                <p class="item2">welcome,</p>
+            <div class="item2" id="usertxt">
+                <p>welcome,</p>
             </div>
 
             <div style="font-size: 14px;">
-                <img onclick="user()" id="user" class="item3" src="images/user1.png" alt="it's you!">
+                <img onclick="userclick()" id="user" class="item3" src="images/user1.png" alt="it's you!">
             </div>
 
         </div>
@@ -107,60 +105,61 @@
 
     <body>
 
-        <audio id="bruh">
-            <source src="media/bruh.mp3" type="audio/mpeg">
-        </audio>
+        <div Audios>
 
-        <audio id="vineboom">
-            <source src="media/vine-boom.mp3" type="audio/mpeg">
-        </audio>
-    
+            <audio id="bruhsound">
+                <source src="media/bruh.mp3" type="audio/mpeg">
+            </audio>
 
+            <audio id="vineboom">
+                <source src="media/vine-boom.mp3" type="audio/mpeg">
+            </audio>
+
+            <audio id="sound3">
+                <source src="media/0o0.mp3" type="audio/mpeg">
+            </audio>
+
+        </div>
 
 
 
         <div class="button-container">
-            
 
             <div>
-                <button>Log in</button>
+                <button onclick="settingsclick()" alt="settings">Settings</button>
             </div>
 
             <div>
-                <button onclick="settings()" alt="settings">Settings</button>
-            </div>
-
-            <div>
-                <button onclick="help()" id="support">Help</button>
+                <button onclick="helpclick()" id="helpbtn">Help</button>
             </div>
 
         </div>
 
-        <p class="regtxt">sample text</p>
-
         <script>
-            
-            let x = document.getElementById("bruh");
-            let useraudio = document.getElementById("vineboom");
 
-            let userr = document.getElementbyId("user");
-            let support = document.getElementbyId("support")
+            let bruhaudio = document.getElementById("bruhsound");
+            let boomaudio = document.getElementById("vineboom");
+            let audio3 = document.getElementById("sound3")
+
+            let support = document.getElementbyId("helpbtn")
+            let usertxt = document.getElementById("usertxt")
 
 
-            function settings() {
-               x.play();
+            function settingsclick() {
+                bruhaudio.play();
             }
 
-            function user() {
-                useraudio.play();
+            function userclick() {
+                boomaudio.play();
+            }
+
+            function helpclick() {
+                document.getElementById("helpbtn").style.display = "none";
+                sound3.play();
             }
 
             let play = (sound) => {
                 sound.play();
-            }
-            
-            function help() {
-                document.getElementById("support").style.display = "none";
             }
 
 
