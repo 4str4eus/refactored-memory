@@ -1,0 +1,33 @@
+.header-container {
+    display: grid;
+    grid-template-columns: max-content 1fr min-content;
+    grid-template-rows: 55px;
+}
+
+.header-container>div {
+    padding: 3%;
+    line-height:normal;
+}
+
+.flex-container>div {
+    margin: 5px;
+} 
+
+.button-container {
+    grid-template-rows: max-content max-content max-content;
+    width: 30%;
+    padding: 1%;
+    height: min-content;
+    float: left;
+}
+
+.button-container>div {
+    padding: 1%;
+    margin: 1%;
+}
+
+.text-box { 
+    line-height: 90%;
+    padding: 2% 2% 2% 2%;
+    border: 1px dashed rgb(30, 11, 71);
+}

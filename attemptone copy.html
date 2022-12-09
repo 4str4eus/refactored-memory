@@ -1,0 +1,126 @@
+<!DOCTYPE.html>
+    <html>
+
+    <head>
+        <link href="styles/elements.css" rel="stylesheet" type:"text">
+        <link href="styles/containers.css" rel="stylesheet" type:"text">
+        <link href="styles/backgrounds.css" rel="stylesheet" type:"text">
+
+    </head>
+
+    <header>
+
+        <div class="header-container">
+
+            <div>
+                <img src="images/website.png" alt="welcome to werbsite">
+            </div>
+
+            <div style="text-align: right;" id="usertxt">
+                <h1>welcome,</h1>
+            </div>
+
+            <div>
+                <img onclick="userclick()" id="user" src="images/user1.png" alt="it's you!">
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <body>
+
+        <div>
+
+            <audio id="bruhsound">
+                <source src="media/bruh.mp3" type="audio/mpeg">
+            </audio>
+
+            <audio id="vineboom">
+                <source src="media/vine-boom.mp3" type="audio/mpeg">
+            </audio>
+
+            <audio id="sound3">
+                <source src="media/0o0.mp3" type="audio/mpeg">
+            </audio>
+
+        </div>
+
+        <div class="flex-container">
+
+            <div class="button-container">
+
+                <div>
+                    <button onclick="settingsclick()" alt="settings">Settings</button>
+                </div>
+
+                <div>
+                    <button onclick="helpclick()" id="helpbtn" alt="Help">Help</button>
+                </div>
+
+            </div>
+
+            <div class="text-box">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque est neque, eget tempus massa
+                varius in. Morbi at lobortis lacus. Cras blandit sit amet est ac elementum. Nunc maximus nec urna ac
+                finibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                Proin ante dui, tincidunt lacinia ultricies quis, fermentum sit amet sem. Phasellus et lorem
+                sollicitudin, tincidunt eros vel, consequat nisl. Morbi pulvinar lacus non pellentesque pellentesque.
+                Vivamus auctor finibus nulla et vehicula. Quisque sit amet augue sit amet justo ultricies malesuada.
+                Praesent interdum diam eget purus maximus pharetra. Orci varius natoque penatibus et magnis dis
+                parturient montes, nascetur ridiculus mus.
+                Suspendisse rutrum sagittis ante, quis blandit dolor laoreet eu. Ut odio metus, fringilla sed interdum
+                sed, porttitor ac nisi. Ut maximus blandit est, vitae posuere enim eleifend in. Vestibulum molestie in
+                odio sit amet feugiat. Nullam a ligula molestie, aliquet tortor vitae, semper ipsum. Donec rhoncus sem
+                sit amet ante eleifend, in convallis felis pulvinar. Nunc in risus est. Aliquam diam tellus, facilisis
+                et dictum a, dignissim non nibh. Sed aliquet rutrum orci in scelerisque. Vivamus nisl massa, viverra ac
+                venenatis pharetra, facilisis vitae magna. Phasellus viverra ipsum ultrices odio venenatis, id molestie
+                arcu semper. In porttitor lorem turpis, a finibus nisl scelerisque at. Aenean pharetra luctus lobortis.
+                Pellentesque molestie neque et hendrerit auctor. Suspendisse malesuada a quam quis congue.
+                Pellentesque porta molestie efficitur. Donec vel convallis turpis. Nunc congue porta blandit. Nulla
+                faucibus consectetur vulputate. Quisque lobortis urna eu sem dignissim, at commodo elit sollicitudin.
+                Curabitur pretium enim in ipsum molestie, nec eleifend metus viverra. Donec fringilla lectus at risus
+                aliquam, non rutrum tellus mollis.
+                Fusce eu enim iaculis felis imperdiet tristique et volutpat sem. Orci varius natoque penatibus et magnis
+                dis parturient montes, nascetur ridiculus mus. Ut sollicitudin ipsum a diam tempor ultrices. Aenean eget
+                malesuada libero. Duis blandit feugiat turpis eu lacinia. Vestibulum leo sem, porttitor id finibus a,
+                faucibus eget felis. Proin dolor lorem, sagittis ac lobortis sed, ultrices malesuada risus. Integer sed
+                lacus malesuada, convallis odio eget, auctor tellus. Curabitur rhoncus, est in condimentum rhoncus, urna
+                erat suscipit dolor, sed molestie metus nunc id massa. Suspendisse vitae molestie velit, in mollis
+                dolor. Sed bibendum ullamcorper magna hendrerit convallis. Ut aliquam, magna id laoreet condimentum,
+                augue est gravida massa, eu viverra urna massa nec elit. Vestibulum consequat eros felis, eget suscipit
+                diam efficitur sed.
+            </div>
+
+        </div>
+
+
+        <script>
+
+            let bruhaudio = document.getElementById("bruhsound");
+            let boomaudio = document.getElementById("vineboom");
+            let audio3 = document.getElementById("sound3")
+
+            let support = document.getElementbyId("helpbtn")
+            let usertxt = document.getElementById("usertxt")
+
+
+            function settingsclick() {
+                bruhaudio.play();
+            }
+
+            function userclick() {
+                boomaudio.play();
+            }
+
+            function helpclick() {
+                document.getElementById("helpbtn").style.display = "none";
+                sound3.play();
+            }
+
+        </script>
+
+    </body>
+
+    </html>

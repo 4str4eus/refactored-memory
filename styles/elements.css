@@ -1,0 +1,45 @@
+@font-face {
+    font-family: werbsitefont;
+    src: url(./media/Werbsitefont.ttf);
+}
+
+body {
+    margin: 0%;
+    font-family: werbsitefont;
+    color: rgb(30, 11, 71);
+}
+
+img { 
+    height: 100%;
+}
+
+h1 {
+    font-size: 130%;
+    text-shadow: -2px -2px 0px rgb(212, 208, 233);
+}
+
+p {
+    color: rgb(30, 11, 71);
+}
+
+header {
+    color:black;
+    display: block;
+    width: 100vw;
+    position: sticky;
+    border-bottom: 1px solid rgb(30, 11, 71);
+}
+
+button {
+    width: 100%;
+    text-align: left;
+    border: 1px solid rgb(30, 11, 71);
+    font-family: werbsitefont;
+    padding: 4%;
+    font-size: 100%;
+    transition: 0.03s;
+}
+
+button:hover {
+    opacity: 70%;
+}
