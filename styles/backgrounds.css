@@ -1,8 +1,10 @@
-body, button {
+body,
+button {
     background-color: rgb(212, 208, 233);
 }
 
-header, .button-container  {
+header,
+.button-container {
     background-image: url(../images/bgtexture.png);
     background-size: 20px;
 }

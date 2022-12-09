@@ -2,16 +2,17 @@
     display: grid;
     grid-template-columns: max-content 1fr min-content;
     grid-template-rows: 55px;
+    position: sticky;
 }
 
 .header-container>div {
     padding: 3%;
-    line-height:normal;
+    line-height: normal;
 }
 
 .flex-container>div {
     margin: 5px;
-} 
+}
 
 .button-container {
     grid-template-rows: max-content max-content max-content;
@@ -26,7 +27,7 @@
     margin: 1%;
 }
 
-.text-box { 
+.text-box {
     line-height: 90%;
     padding: 2% 2% 2% 2%;
     border: 1px dashed rgb(30, 11, 71);

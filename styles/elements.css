@@ -9,7 +9,7 @@ body {
     color: rgb(30, 11, 71);
 }
 
-img { 
+img {
     height: 100%;
 }
 
@@ -23,7 +23,7 @@ p {
 }
 
 header {
-    color:black;
+    color: black;
     display: block;
     width: 100vw;
     position: sticky;
